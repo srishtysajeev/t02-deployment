@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: t02
+  namespace: zsw36318
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: zsw36318
+  destination:
+    name: argus
+    namespace: zsw36318
+  source:
+    path: apps
+    repoURL: https://github.com/srishtysajeev/t02-deployment
+    targetRevision: main
+    helm:
+      version: v3
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

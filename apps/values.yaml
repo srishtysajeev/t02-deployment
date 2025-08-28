@@ -45,7 +45,7 @@ ec_services:
   #     targetRevision: main
   bl01t-di-cam-01:
     enabled: true
-    targetRevision: detector-changes
+    targetRevision: 2025.8.1
   t02-gateways:
     enabled: true
     targetRevision: main
